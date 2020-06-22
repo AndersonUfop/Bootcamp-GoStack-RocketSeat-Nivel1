@@ -3,7 +3,7 @@ import {SafeAreaView, FlatList, Text, StyleSheet, StatusBar, TouchableOpacity } 
 import api from './services/api';
 
 export default function App() {
-    const {projects, setProjects} = useState([]);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         api.get('projects').then(response  => {
